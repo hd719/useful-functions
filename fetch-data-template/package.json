@@ -1,0 +1,14 @@
+{
+  "name": "hubspot-interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hamel Desai",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
