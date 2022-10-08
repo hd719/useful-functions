@@ -36,19 +36,24 @@ function sort() {
 
 // 3. Create Grid
 // Coordinate System Algorithm (Spreadsheet or Grid)
-function createGrid() {
-  const alphabetRows = ["A", "B", "C"];
-  const columns = 3;
-  const arr = new Array();
 
-  for (let column = 0; column < columns; column++) {
-    const row = alphabetRows.map((letter, rowIndex) => {
-      return { x: column, y: rowIndex + 1 };
+function createGrid() {
+  const alphabetColumns = ["A", "B", "C"];
+  const numberRows = [1, 2, 3];
+  // const numberRows = [...Array(10).keys()] // create array of numbers from 0 to 9
+  // const alphabetColumns = [...Array(26)].map((_, i) => String.fromCharCode(i + 97)); // create array of letters from a to z
+  const grid = new Array();
+
+  for (let column = 0; column < alphabetColumns.length; column++) {
+    const row = numberRows.map((number, rowIndex) => {
+      return { column: alphabetColumns[column], row: rowIndex + 1 };
     });
 
-    arr.push(row);
+    grid.push(row);
   }
 
-  console.log("arr:", arr);
-  return arr;
+  console.log("grid:", grid);
+  return grid;
 }
+
+createGrid();
